@@ -65,7 +65,7 @@ if yesterday in performance_dates:
 
     df = pd.DataFrame()
     for corps in corps_url:
-        print(f'Processing {corps}')
+        
         newdf = pd.DataFrame()
         for i in range(CURRENT_YEAR, CURRENT_YEAR+1):
             url = 'https://www.dci.org/scores/corps-summary?season='+str(i)+'&corp='+corps
