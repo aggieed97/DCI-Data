@@ -14,15 +14,24 @@ today = dt.date.today()
 yesterday = (today - dt.timedelta(days=1)).strftime("%Y-%m-%d")
 
 larger_urls = [
-        "https://www.dci.org/scores/recap/2022-dci-southwestern-championship",
-        'https://www.dci.org/scores/recap/2022-dci-southeastern-championship',
-        'https://www.dci.org/scores/recap/2022-dci-eastern-classic-2',
-        'https://www.dci.org/scores/recap/2022-dci-eastern-classic',
-        'https://www.dci.org/scores/recap/2022-dci-world-championship-prelims',
-        'https://www.dci.org/scores/recap/2022-dci-world-championship-semifinals',
-        'https://www.dci.org/scores/recap/2022-dci-world-championship-finals'
-  ]
+        "https://www.dci.org/scores/recap/2023-dci-southwestern-championship",
+        'https://www.dci.org/scores/recap/2023-dci-southeastern-championship',
+        'https://www.dci.org/scores/recap/2023-dci-eastern-classic-2',
+        'https://www.dci.org/scores/recap/2023-dci-eastern-classic',
+        'https://www.dci.org/scores/recap/2023-dci-world-championship-prelims',
+        'https://www.dci.org/scores/recap/2023-dci-world-championship-semifinals',
+        'https://www.dci.org/scores/recap/2023-dci-world-championship-finals'
+]
 
+performance_dates = [
+ '2023-07-22',
+ '2023-07-29',
+ '2023-08-04',
+ '2023-08-05',
+ '2023-08-10',
+ '2023-08-11',
+ '2023-08-12'
+]
 larger_comps_df = pd.DataFrame()
 
 for url in larger_urls:
