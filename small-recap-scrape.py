@@ -2,11 +2,13 @@ import requests
 import json
 
 from datetime import datetime
+import datetime as dt
 from bs4 import BeautifulSoup
 
 import dict_digger
 
 import pandas as pd
+
 
 CURRENT_YEAR = 2023
 
@@ -59,7 +61,6 @@ urls = [
  'https://www.dci.org/scores/recap/2023-dci-denton',
  'https://www.dci.org/scores/recap/2023-dci-houston',
  'https://www.dci.org/scores/recap/2023-white-rose-classic',
- #'https://www.dci.org/scores/recap/2023-dci-southwestern-championship',
  'https://www.dci.org/scores/recap/2023-summer-thunder',
  'https://www.dci.org/scores/recap/2023-dci-connecticut',
  'https://www.dci.org/scores/recap/2023-dci-mesquite',
@@ -71,7 +72,6 @@ urls = [
  'https://www.dci.org/scores/recap/2023-dci-birmingham',
  'https://www.dci.org/scores/recap/2023-music-on-the-mountain',
  'https://www.dci.org/scores/recap/2023-the-masters-of-the-summer-music-games',
- #'https://www.dci.org/scores/recap/2023-dci-southeastern-championship',
  'https://www.dci.org/scores/recap/2023-spartan-thunder',
  'https://www.dci.org/scores/recap/2023-nightbeat',
  'https://www.dci.org/scores/recap/2023-dci-huntington',
@@ -83,21 +83,15 @@ urls = [
  'https://www.dci.org/scores/recap/2023-march-on',
  'https://www.dci.org/scores/recap/2023-soaring-sounds',
  'https://www.dci.org/scores/recap/2023-dci-east-coast-showcase-lawrence',
- #'https://www.dci.org/scores/recap/2023-dci-eastern-classic',
  'https://www.dci.org/scores/recap/2023-drums-in-the-heartland',
  'https://www.dci.org/scores/recap/2023-tournament-of-drums',
- #'https://www.dci.org/scores/recap/2023-dci-eastern-classic-2',
  'https://www.dci.org/scores/recap/2023-dci-eastern-illinois',
  'https://www.dci.org/scores/recap/2023-shoremen-brass-classic',
  'https://www.dci.org/scores/recap/2023-dci-pittsburgh',
  'https://www.dci.org/scores/recap/2023-dci-cincinnati',
  'https://www.dci.org/scores/recap/2023-dci-open-class-world-championship-prelims',
  'https://www.dci.org/scores/recap/2023-innovations-in-brass',
- 'https://www.dci.org/scores/recap/2023-lake-erie-fanfare',
- 'https://www.dci.org/scores/recap/2023-dci-open-class-world-championship-finals',
- # 'https://www.dci.org/scores/recap/2023-dci-world-championship-prelims',
- # 'https://www.dci.org/scores/recap/2023-dci-world-championship-semifinals',
- # 'https://www.dci.org/scores/recap/2023-dci-world-championship-finals',
+ 'https://www.dci.org/scores/recap/2023-lake-erie-fanfare'
 ]
 
 performance_dates = [
@@ -156,7 +150,7 @@ score_recap_df = pd.DataFrame()
 for url in urls:
     r = requests.get(url)
     soup = BeautifulSoup(r.content, 'html.parser')
-    script = soup.find_all('script')[6].text.strip()[16:-1]
+    script = soup.find_all('script')[7].text.strip()[16:-1]
     data = json.loads(script)
 
     competition = dict_digger.dig(data, 'state', 'competitions', 'current')
@@ -252,4 +246,4 @@ for url in urls:
     else:
         pass
 
-score_recap_df.to_csv(f'./data/{CURRENT_YEAR}=DCI-Caption-Score-Recaps.csv', index=False)
+score_recap_df.to_csv(f'./data/{CURRENT_YEAR}-DCI-Caption-Score-Recaps.csv', index=False)
