@@ -2,6 +2,7 @@ import requests
 import json
 
 from datetime import datetime
+import datetime as dt
 from bs4 import BeautifulSoup
 
 import dict_digger
