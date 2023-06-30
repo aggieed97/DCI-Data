@@ -12,4 +12,4 @@ cd ~/R-Projects/DCI-R-Projects/
 
 /usr/lib/R/bin/Rscript ~/R-Projects/DCI-R-Projects/DCI-Max-Score-Table.R
 
-/usr/lib/R/bin/Rscript ~/R-Projects/DCI-R-Projects/DCI-Max-Captions.R
+/usr/lib/R/bin/Rscript ~/R-Projects/DCI-R-Projects/DCI-Max-Captions-Loop.R
