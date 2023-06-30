@@ -13,3 +13,5 @@ cd ~/R-Projects/DCI-R-Projects/
 /usr/lib/R/bin/Rscript ~/R-Projects/DCI-R-Projects/DCI-Max-Score-Table.R
 
 /usr/lib/R/bin/Rscript ~/R-Projects/DCI-R-Projects/DCI-Max-Captions-Loop.R
+
+~/Python-Projects/DCI-Data/venv/bin/python /home/aggieed97/Python-Projects/DCI-Data/send_tweet.py
