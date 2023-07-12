@@ -120,4 +120,4 @@ if yesterday in performance_dates:
         media_ids=music_media_ids
     )
 else:
-    print("No perforamces yesterday.")
+    print("No performances yesterday.")
