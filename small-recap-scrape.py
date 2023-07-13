@@ -163,13 +163,22 @@ if yesterday in performance_dates:
 
                     general_effect1_judge = item['categories'][0]['Captions'][0]['JudgeFirstName'] + ' ' + \
                                             item['categories'][0]['Captions'][0]['JudgeLastName']
-                    general_effect2_judge = item['categories'][0]['Captions'][1]['JudgeFirstName'] + ' ' + \
+
+                    try:
+                        general_effect2_judge = item['categories'][0]['Captions'][1]['JudgeFirstName'] + ' ' + \
                                             item['categories'][0]['Captions'][1]['JudgeLastName']
+                    except:
+                        general_effect2_judge = "Judge"
+
                     general_effect1_score = item['categories'][0]['Captions'][0]['Score']
                     general_effect2_score = item['categories'][0]['Captions'][1]['Score']
 
-                    visual_proficiency_judge = item['categories'][1]['Captions'][0]['JudgeFirstName'] + ' ' + \
+                    try:
+                        visual_proficiency_judge = item['categories'][1]['Captions'][0]['JudgeFirstName'] + ' ' + \
                                                item['categories'][1]['Captions'][0]['JudgeLastName']
+                    except:
+                        visual_proficiency_judge = "Judge"
+                        
                     visual_proficiency_score = item['categories'][1]['Captions'][0]['Score']
 
                     visual_analysis_judge = item['categories'][1]['Captions'][1]['JudgeFirstName'] + ' ' + \
