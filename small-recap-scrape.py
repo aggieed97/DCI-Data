@@ -178,7 +178,7 @@ if yesterday in performance_dates:
                                                item['categories'][1]['Captions'][0]['JudgeLastName']
                     except:
                         visual_proficiency_judge = "Judge"
-                        
+
                     visual_proficiency_score = item['categories'][1]['Captions'][0]['Score']
 
                     visual_analysis_judge = item['categories'][1]['Captions'][1]['JudgeFirstName'] + ' ' + \
