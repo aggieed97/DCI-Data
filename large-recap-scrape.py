@@ -25,6 +25,7 @@ larger_urls = [
 ]
 
 performance_dates = [
+ '2023-07-21',
  '2023-07-22',
  '2023-07-29',
  '2023-08-04',
@@ -33,6 +34,12 @@ performance_dates = [
  '2023-08-11',
  '2023-08-12'
 ]
+
+corps = [
+        'Blue Devils', 'Blue Knights', 'Blue Stars', 'Bluecoats', 'Boston Crusaders', 'Carolina Crown', 'Colts', 'Crossmen', 'Genesis', 'Jersey Surf',
+        'Madison Scouts', 'Mandarins', 'Music City', 'Pacific Crest', 'Phantom Regiment', 'Santa Clara Vanguard', 'Seattle Cascades', 'Spirit of Atlanta',
+        'The Academy', 'The Cadets', 'The Cavaliers', 'Troopers'
+        ]
 
 if yesterday in performance_dates:
     larger_comps_df = pd.DataFrame()
