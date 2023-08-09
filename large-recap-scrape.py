@@ -29,6 +29,7 @@ performance_dates = [
  '2023-07-28',
  '2023-08-04',
  '2023-08-05',
+ '2023-08-08',
  '2023-08-10',
  '2023-08-11',
  '2023-08-12'
@@ -95,7 +96,7 @@ if yesterday in performance_dates:
                                         item['categories'][2]['Captions'][0]['JudgeLastName']
                     music_brass_score = item['categories'][2]['Captions'][0]['Score']
 
-                    if len(competition[-1]['categories'][2]['Captions']) == 4:
+                    if len(competition[-3]['categories'][2]['Captions']) == 4:
                         music_analysis_judge = item['categories'][2]['Captions'][1]['JudgeLastName'] + '/' + \
                                                item['categories'][2]['Captions'][2]['JudgeLastName']
                         # music_analysis2_judge = item['categories'][2]['Captions'][2]['JudgeFirstName'] + ' ' + item['categories'][2]['Captions'][2]['JudgeLastName']
